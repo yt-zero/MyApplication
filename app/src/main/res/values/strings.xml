@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_setting">Setting</string>
+    <string name="title_activity_week">Week</string>
+    <string name="title_activity_period">Period</string>
+    <string name="title_activity_wtime">WTime</string>
+    <string name="title_activity_day">Day</string>
+    <string name="title_activity_settings">Settings</string>
+</resources>

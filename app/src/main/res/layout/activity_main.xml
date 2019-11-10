@@ -24,12 +24,12 @@
         android:id="@+id/week"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="92dp"
-        android:layout_marginRight="92dp"
         android:onClick="weekPress"
         android:text="Week"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.704" />
 
@@ -40,18 +40,33 @@
         android:onClick="settingPress"
         android:text="Setting"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintEnd_toStartOf="@+id/week"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/week"
-        app:layout_constraintVertical_bias="0.207" />
+        app:layout_constraintTop_toTopOf="@+id/day"
+        app:layout_constraintVertical_bias="0.44" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="415dp"
         android:layout_height="400dp"
-        app:srcCompat="@drawable/ic_launcher_background"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:textOff="Enable special Day"
+        android:textOn="disable special Day"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintStart_toEndOf="@+id/setting"
+        app:layout_constraintTop_toTopOf="@+id/week"
+        app:layout_constraintVertical_bias="0.44" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -73,6 +73,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1080868252915-k6oq7oj06r1iep1e94hbp04un7i2sl3h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myschedule",
+            "certificate_hash": "6f4ca82d3b32db41b274121aa537ebaac494ab91"
+          }
+        },
+        {
           "client_id": "1080868252915-bfu68osnou89sqepg6hs6ssp4fiann21.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -101,6 +109,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "1080868252915-s25spl4no1nni2ovatdt9r7pubcdmdee.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.schedule",
+            "certificate_hash": "6f4ca82d3b32db41b274121aa537ebaac494ab91"
+          }
+        },
         {
           "client_id": "1080868252915-bfu68osnou89sqepg6hs6ssp4fiann21.apps.googleusercontent.com",
           "client_type": 3

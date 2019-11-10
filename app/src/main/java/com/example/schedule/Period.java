@@ -11,6 +11,7 @@ import java.util.ArrayList;
         String period;
         String teacher, room, subject;
         private static ArrayList<Period> periods = new ArrayList<Period>();
+        public static ArrayList<Period> specialD=new ArrayList<>();
         //Whether print one day or the whole week
         static boolean printDay = false;
         static boolean isBWeek = false;
@@ -75,6 +76,7 @@ import java.util.ArrayList;
         }
 
         public static void loadPeriodsA() {
+            //load A week
             periods.add(new Period(new WTime(1, 8, 00), 15, "Chapel"));
             periods.add(new Period(new WTime(1, 8, 20), 70, "1"));
             periods.add(new Period(new WTime(1, 9, 35), 45, "2"));
@@ -119,6 +121,7 @@ import java.util.ArrayList;
         }
 
         public static void loadPeriodsB() {
+            //load B week
             periods.add(new Period(new WTime(1, 8, 00), 15, "Chapel"));
             periods.add(new Period(new WTime(1, 8, 20), 70, "1"));
             periods.add(new Period(new WTime(1, 9, 35), 45, "2"));
@@ -183,8 +186,16 @@ import java.util.ArrayList;
             //today.getDay();
             ArrayList<Period> dayPeriods = Period.getTodaysPeriods(today.getDay());
             printDay = true;
-            for (Period i : dayPeriods)
-                i.draw(c);
+            if(Day.specialDay==true) {
+
+                for (Period i : specialD)
+
+                    i.draw(c);
+            }
+            else {
+                for (Period i : dayPeriods)
+                    i.draw(c);
+            }
         }
 
         public static void setAllPeriodInfo(String num, String meets, String className, String room, String teacher) {
@@ -204,6 +215,21 @@ import java.util.ArrayList;
                         p.setSubject(className);
                         p.setRoom(room);
                         p.setTeacher(teacher);
+                    }
+                }
+            }
+            for (Period s:specialD) {
+                if (s.period.equals(num)) {
+                    if (meets.length() < 1) {
+                        s.setSubject(className);
+                        s.setRoom(room);
+                        s.setTeacher(teacher);
+                    } else if (meets.length() > meetsNum && meets.substring(meetsNum, meetsNum + 1).equals("" + meetsSession)) {
+                        meetsNum++;
+                        meetsSession++;
+                        s.setSubject(className);
+                        s.setRoom(room);
+                        s.setTeacher(teacher);
                     }
                 }
             }

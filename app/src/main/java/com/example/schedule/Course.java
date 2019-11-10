@@ -1,5 +1,7 @@
 package com.example.schedule;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 public class Course {
@@ -23,7 +25,11 @@ public class Course {
         this.Section=Section;
         this.Teacher=Teacher;
     }
+    //sort courseL into different Array List. If a course take place in period 1, it will be added to p1course. If a course occur in period 2, it will be added to p2course, and so on.
     public static void sort(){
+        //clear each ArrayList, otherwise a new copy of course information will be create each time when program open setting activity. namely, there will be a lots of duplication of the same course in the autoComplete.
+        //if it is too much work for the device. you can also create a new variable. if it is the first time, the program enter setting, sort the List. if it is the second or more times, skip this part.
+        clearList();
         for(Course a:coursesL){
            switch(a.period){
                case 1:
@@ -47,12 +53,22 @@ public class Course {
                case 7:
                    p7course.add(a);
                    break;
-           }
 
-        }
+           }
+            }
 
     }
-    public String toString(Course course){
-        return course.CourseN+" "+course.Section+" "+course.Classroom+" "+course.Teacher;
+    public String toString(){
+        return CourseN+" "+Section+" "+Classroom+" "+Teacher;
+    }
+
+    public static void clearList(){
+    p1course.clear();
+    p2course.clear();
+    p3course.clear();
+    p4course.clear();
+    p5course.clear();
+    p6course.clear();
+    p7course.clear();
     }
 }

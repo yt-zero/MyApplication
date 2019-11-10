@@ -15,6 +15,8 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 
 public class Day extends AppCompatActivity {
+    //a boolean variable to show if it is a speical day or not
+    public static Boolean specialDay=false;
     public class MyView extends View {
 
         public MyView(Context context) {
